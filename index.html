@@ -78,7 +78,9 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">My Fashion Style</a>
+							<a class="nav-link active" aria-current="page" href="#"
+								>My Fashion Style</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="https://dogstyle.tk/">My Dog Style</a>
@@ -91,19 +93,19 @@
 			<h1 class="title">My Fashion Style (AI TEST)</h1>
 			<h2 class="subtitle">당신의 패션은 어떤 스타일인가요?</h2>
 		</section>
-		 <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
-    <section class="d-flex justify-content-center">
-        <p class="d-flex align-items-center pr-3">여자</p>
-        <div>
-            <input type="checkbox" id="gender">
-            <label for="gender">
-                <span class="knob">
-                    <i></i>
-                </span>
-            </label>
-        </div>
-        <p class="d-flex align-items-center pl-3">남자</p>
-    </section>
+		<h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+		<section class="d-flex justify-content-center">
+			<p class="d-flex align-items-center pr-3">여자</p>
+			<div>
+				<input type="checkbox" id="gender" />
+				<label for="gender">
+					<span class="knob">
+						<i></i>
+					</span>
+				</label>
+			</div>
+			<p class="d-flex align-items-center pl-3">남자</p>
+		</section>
 		<script
 			class="jsbin"
 			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
@@ -135,15 +137,18 @@
 				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
 				<div class="share">
 					<div style="display: inline-block;">
-					<a id="kakao-link-btn" href="javascript:sendLink()">
-						<img class="kakao-link-btn"
-			src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-						/>
-					</a>
-				    </div>
-				    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-				    <div class="mt-5 addthis_inline_share_toolbox_d6fn" style="display: inline-block;">
-				    </div>
+						<a id="kakao-link-btn" href="javascript:sendLink()">
+							<img
+								class="kakao-link-btn"
+								src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+							/>
+						</a>
+					</div>
+					<!-- Go to www.addthis.com/dashboard to customize your tools -->
+					<div
+						class="mt-5 addthis_inline_share_toolbox_d6fn"
+						style="display: inline-block;"
+					></div>
 				</div>
 				<div class="image-title-wrap">
 					<button
@@ -170,9 +175,9 @@
 			<ins
 				class="kakao_ad_area"
 				style="display: none;"
-				data-ad-unit="DAN-OWPNpgRkjHj7BzKk"
-				data-ad-width="320"
-				data-ad-height="100"
+				data-ad-unit="DAN-Zs3Crv3ch2cUOMzN"
+				data-ad-width="250"
+				data-ad-height="250"
 			></ins>
 			<script
 				type="text/javascript"
@@ -217,7 +222,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script type="text/javascript">
-			Kakao.init('8c6e7db69f3c900ac3bd5191e58dd69a');
+			Kakao.init('4eb10b482c89104647705e6050a9e648');
 			function sendLink() {
 				Kakao.Link.sendScrap({
 					requestUrl: 'http://myfashionstyle.ga',
@@ -273,11 +278,11 @@
 			let model, labelContainer, maxPredictions;
 			// Load the image model and setup the webcam
 			async function init() {
-				if (document.getElementById("gender").checked) {
-                URL = urlMale;
-            } else {
-                URL = urlFemale;
-            }
+				if (document.getElementById('gender').checked) {
+					URL = urlMale;
+				} else {
+					URL = urlFemale;
+				}
 				const modelURL = URL + 'model.json';
 				const metadataURL = URL + 'metadata.json';
 				model = await tmImage.load(modelURL, metadataURL);
@@ -295,69 +300,69 @@
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
 				var resultTilte, resultExplain;
-				if (document.getElementById("gender").checked) {
-				  switch (prediction[0].className) {
-					case 'classic':
-						resultTilte = 'Classic';
-						resultExplain =
-							'지금 당신의 패션은 클래식한 스타일에 가깝군요. 격식을 갖춘 당신은 오늘 모든 업무에 성과가 있을 겁니다. 자신감을 갖고 일터로 고고씽!';
-						break;
-					case 'vintage':
-						resultTilte = 'Vintage';
-						resultExplain =
-							'지금 당신의 패션은 빈티지한 스타일에 가깝군요. 편안하고 고풍스런 느낌을 주는 옷을 즐겨 입는 당신은 자존감이 무척 높아 보입니다.';
-						break;
-					case 'modern':
-						resultTilte = 'Modern';
-						resultExplain =
-							'지금 당신의 패션은 모던한 스타일에 가깝군요. 현대적이고 세련된 감각을 지닌 당신은 인기가 많을 거라고 예상됩니다. 인기 많은 당신, 오늘도 주위 사람들을 기쁘게 해주세요.';
-						break;
-					case 'sporty':
-						resultTilte = 'Sporty';
-						resultExplain =
-							'지금 당신의 패션은 스포티한 스타일에 가깝군요. 자연스럽고 건강해보이는 캐주얼 레져를 즐길 준비가 되어있네요. 오늘 하루 당신의 자유를 마음껏 누리세요.';
-						break;
-					case 'unique':
-						resultTilte = 'Unique';
-						resultExplain =
-							'지금 당신의 패션은 전사 스타일에 가깝군요. 주위 사람들의 시선을 신경 안 쓰는 당신은 진정 영혼이 자유로운 사람 같네요. 오늘 하루 당신 주변 사람들의 영혼도 자유롭게 만들어 주세요.';
-						break;
-					default:
-						resultTilte = '알 수 없음';
-						resultExplain = '';
+				if (document.getElementById('gender').checked) {
+					switch (prediction[0].className) {
+						case 'classic':
+							resultTilte = 'Classic';
+							resultExplain =
+								'지금 당신의 패션은 클래식한 스타일에 가깝군요. 격식을 갖춘 당신은 오늘 모든 업무에 성과가 있을 겁니다. 자신감을 갖고 일터로 고고씽!';
+							break;
+						case 'vintage':
+							resultTilte = 'Vintage';
+							resultExplain =
+								'지금 당신의 패션은 빈티지한 스타일에 가깝군요. 편안하고 고풍스런 느낌을 주는 옷을 즐겨 입는 당신은 자존감이 무척 높아 보입니다.';
+							break;
+						case 'modern':
+							resultTilte = 'Modern';
+							resultExplain =
+								'지금 당신의 패션은 모던한 스타일에 가깝군요. 현대적이고 세련된 감각을 지닌 당신은 인기가 많을 거라고 예상됩니다. 인기 많은 당신, 오늘도 주위 사람들을 기쁘게 해주세요.';
+							break;
+						case 'sporty':
+							resultTilte = 'Sporty';
+							resultExplain =
+								'지금 당신의 패션은 스포티한 스타일에 가깝군요. 자연스럽고 건강해보이는 캐주얼 레져를 즐길 준비가 되어있네요. 오늘 하루 당신의 자유를 마음껏 누리세요.';
+							break;
+						case 'unique':
+							resultTilte = 'Unique';
+							resultExplain =
+								'지금 당신의 패션은 전사 스타일에 가깝군요. 주위 사람들의 시선을 신경 안 쓰는 당신은 진정 영혼이 자유로운 사람 같네요. 오늘 하루 당신 주변 사람들의 영혼도 자유롭게 만들어 주세요.';
+							break;
+						default:
+							resultTilte = '알 수 없음';
+							resultExplain = '';
+					}
+				} else {
+					switch (prediction[0].className) {
+						case 'classic':
+							resultTilte = 'Classic';
+							resultExplain =
+								'지금 당신의 패션은 클래식한 스타일에 가깝군요. 격식을 갖춘 당신은 오늘 모든 업무에 성과가 있을 겁니다. 자신감을 갖고 일터로 고고씽!';
+							break;
+						case 'vintage':
+							resultTilte = 'Vintage';
+							resultExplain =
+								'지금 당신의 패션은 빈티지한 스타일에 가깝군요. 편안하고 고풍스런 느낌을 주는 옷을 즐겨 입는 당신은 자존감이 무척 높아 보입니다.';
+							break;
+						case 'modern':
+							resultTilte = 'Modern';
+							resultExplain =
+								'지금 당신의 패션은 모던한 스타일에 가깝군요. 현대적이고 세련된 감각을 지닌 당신은 인기가 많을 거라고 예상됩니다. 인기 많은 당신, 오늘도 주위 사람들을 기쁘게 해주세요.';
+							break;
+						case 'sporty':
+							resultTilte = 'Sporty';
+							resultExplain =
+								'지금 당신의 패션은 스포티한 스타일에 가깝군요. 자연스럽고 건강해보이는 캐주얼 레져를 즐길 준비가 되어있네요. 오늘 하루 당신의 자유를 마음껏 누리세요.';
+							break;
+						case 'unique':
+							resultTilte = 'Unique';
+							resultExplain =
+								'지금 당신의 패션은 전사 스타일에 가깝군요. 주위 사람들의 시선을 신경 안 쓰는 당신은 진정 영혼이 자유로운 사람 같네요. 오늘 하루 당신 주변 사람들의 영혼도 자유롭게 만들어 주세요.';
+							break;
+						default:
+							resultTilte = '알 수 없음';
+							resultExplain = '';
+					}
 				}
-			} else { 
-				  switch (prediction[0].className) {
-					case 'classic':
-						resultTilte = 'Classic';
-						resultExplain =
-							'지금 당신의 패션은 클래식한 스타일에 가깝군요. 격식을 갖춘 당신은 오늘 모든 업무에 성과가 있을 겁니다. 자신감을 갖고 일터로 고고씽!';
-						break;
-					case 'vintage':
-						resultTilte = 'Vintage';
-						resultExplain =
-							'지금 당신의 패션은 빈티지한 스타일에 가깝군요. 편안하고 고풍스런 느낌을 주는 옷을 즐겨 입는 당신은 자존감이 무척 높아 보입니다.';
-						break;
-					case 'modern':
-						resultTilte = 'Modern';
-						resultExplain =
-							'지금 당신의 패션은 모던한 스타일에 가깝군요. 현대적이고 세련된 감각을 지닌 당신은 인기가 많을 거라고 예상됩니다. 인기 많은 당신, 오늘도 주위 사람들을 기쁘게 해주세요.';
-						break;
-					case 'sporty':
-						resultTilte = 'Sporty';
-						resultExplain =
-							'지금 당신의 패션은 스포티한 스타일에 가깝군요. 자연스럽고 건강해보이는 캐주얼 레져를 즐길 준비가 되어있네요. 오늘 하루 당신의 자유를 마음껏 누리세요.';
-						break;
-					case 'unique':
-						resultTilte = 'Unique';
-						resultExplain =
-							'지금 당신의 패션은 전사 스타일에 가깝군요. 주위 사람들의 시선을 신경 안 쓰는 당신은 진정 영혼이 자유로운 사람 같네요. 오늘 하루 당신 주변 사람들의 영혼도 자유롭게 만들어 주세요.';
-						break;
-					default:
-						resultTilte = '알 수 없음';
-						resultExplain = '';
-				}
-			}
 				var title =
 					"<div class='" +
 					prediction[0].className +
