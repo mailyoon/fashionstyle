@@ -1,0 +1,364 @@
+body {
+	font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+	background-color: #ffffff;
+}
+.pb-2 {
+    padding-bottom: .5rem!important;
+    padding-top: 3rem;
+}
+.file-upload {
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding: 3rem;
+}
+.file-upload-btn {
+	width: 100%;
+	margin: 0;
+	color: #fff;
+	background: #1fb264;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border-bottom: 4px solid #15824b;
+	transition: all 0.2s ease;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.file-upload-btn:hover {
+	background: #1aa059;
+	color: #ffffff;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.file-upload-btn:active {
+	border: 0;
+	transition: all 0.2s ease;
+}
+
+.file-upload-content {
+	display: none;
+	text-align: center;
+}
+
+.file-upload-input {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.image-upload-wrap {
+	border: 2px dashed #ffcc00;
+	position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+	background-color: #ffffe0;
+	border: 2px dashed #ffcc00;
+}
+
+.image-title-wrap {
+	padding: 0 15px 15px 15px;
+	color: #222;
+}
+
+.drag-text {
+	text-align: center;
+}
+
+.drag-text h3 {
+	width: 100%;
+	font-weight: 100;
+	text-transform: uppercase;
+	color: #000000;
+	padding: 0 3.5rem;
+	margin: 0 auto;
+}
+
+.file-upload-image {
+	max-height: 200px;
+	max-width: 200px;
+	margin: auto;
+	padding: 20px;
+}
+
+.try-again-btn {
+	width: 200px;
+	margin: 0;
+	color: #fff;
+	background: #ffa500;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border-bottom: 4px solid #ff8c00;
+	transition: all 0.2s ease;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.try-again-btn:hover {
+	background: #c13b2a;
+	color: #ffffff;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.try-again-btn:active {
+	border: 0;
+	transition: all 0.2s ease;
+}
+
+.nav-distance {
+	padding: 2.1% 7%;
+}
+
+.navbar-light .navbar-toggler {
+	border-color: #ffffff;
+}
+.section {
+	margin-top: 2rem;
+}
+.title {
+	text-align: center;
+}
+.subtitle {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: calc(1.3rem + 0.6vw);
+}
+.share {
+	text-align: center;
+}
+.kakao-link-btn {
+	width: 42px;
+    margin-bottom: 4.5rem;
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+	html {
+		font-size: 10px;
+	}
+	.nevbar-brand {
+		font-size: 2rem;
+	}
+}
+.bar-container {
+	height: 2.7rem;
+}
+.vintage-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(75, 192, 192, 0.2);
+}
+.vintage-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(75, 192, 192, 1);
+}
+.modern-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(255, 99, 132, 0.2);
+}
+.modern-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(255, 99, 132, 1);
+}
+.sporty-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(54, 162, 235, 0.2);
+}
+.sporty-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(54, 162, 235, 1);
+}
+.classic-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(255, 206, 86, 0.2);
+}
+.classic-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(255, 206, 86, 1);
+}
+.unique-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	background-color: rgba(153, 102, 255, 0.2);
+}
+.unique-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgba(153, 102, 255, 1);
+}
+.percent-text {
+	font-size: 1rem;
+	color: #ffffff;
+}
+.animal-label {
+	width: 15%;
+	text-align: left;
+	font-size: 1.2rem;
+	height: 2rem;
+}
+#label-container {
+	width: 80%;
+	margin: 0 auto;
+}
+.result-message {
+	font-size: 2rem;
+}
+.animal-explain {
+	width: 80%;
+	margin: auto;
+	font-size: 1.3rem;
+}
+.modern-animal-title {
+	color: #4bc0c0;
+}
+.vintage-animal-title {
+	color: #ff6384;
+}
+.sporty-animal-title {
+	color: #36a2eb;
+}
+.classic-animal-title {
+	color: #ffce56;
+}
+.unique-animal-title {
+	color: #9966ff;
+}
+
+/* gender */
+.pr-3 {
+	margin-right: 1rem;
+}
+.pl-3 {
+	margin-left: 1rem;
+}
+input#gender {
+  display: none;
+}
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.youtube-cover {
+	text-align: center;
+}
+.ad-banner {
+	width: 320px;
+	margin: 0 auto;
+}
